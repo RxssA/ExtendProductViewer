@@ -1,16 +1,15 @@
-package ie.atu.productv5;
+package ie.atu.product6;
 
-import ie.atu.product6.Productable;
 
-public class ProductDB implements Productable {
+public class ProductDB{
 
-    public static Product getProduct(String productCode) {
+    public static Productable getProduct(String productCode) {
         // In a more realistic application, this code would
         // get the data for the product from a file or database
         // For now, this code just uses if/else statements
         // to return the correct product data
 
-        Product p = null;
+        Productable p = null;
 
         if (productCode.equalsIgnoreCase("java")) {
             Book myBook = new Book();
@@ -18,21 +17,21 @@ public class ProductDB implements Productable {
             myBook.setDescription("ATU Java Programming");
             myBook.setPrice(57.50);
             myBook.setAuthor("Joe Brown");
-            p = myBook;
+            p = (Productable) myBook;
         } else if (productCode.equalsIgnoreCase("jsp")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
             myBook.setDescription("Java Servlets and JSP");
             myBook.setPrice(57.50);
             myBook.setAuthor("Mike White");
-            p = myBook;
+            p = (Productable) myBook;
         } else if (productCode.equalsIgnoreCase("mysql")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
             myBook.setDescription("Lennon's MySQL");
             myBook.setPrice(54.50);
             myBook.setAuthor("Jim Lennon");
-            p = myBook;
+            p = (Productable) myBook;
         }
 
 
@@ -42,21 +41,21 @@ public class ProductDB implements Productable {
             mySoftware.setDescription("Visual Studios");
             mySoftware.setPrice(57.50);
             mySoftware.setVersion("Microsoft 1.1");
-            p = mySoftware;
+            p = (Productable) mySoftware;
         } else if (productCode.equalsIgnoreCase("eclipse")) {
             Software mySoftware = new Software();
             mySoftware.setCode(productCode);
             mySoftware.setDescription("Build Java apps");
             mySoftware.setPrice(57.50);
             mySoftware.setVersion("Eclipse Neon");
-            p = mySoftware;
+            p = (Productable) mySoftware;
         } else if (productCode.equalsIgnoreCase("oracle")) {
             Software mySoftware = new Software();
             mySoftware.setCode(productCode);
             mySoftware.setDescription("Latest MySQL");
             mySoftware.setPrice(54.50);
             mySoftware.setVersion("Oracle 3.0");
-            p = mySoftware;
+            p = (Productable) mySoftware;
 
         } if (productCode.equalsIgnoreCase("pink")) {
             Music myMusic = new Music();
@@ -65,7 +64,7 @@ public class ProductDB implements Productable {
             myMusic.setPrice(8);
             myMusic.setArtist("Pink Floyd");
             myMusic.setLabel("Columbia group");
-            p = myMusic;
+            p = (Productable) myMusic;
 
         }
          if (productCode.equalsIgnoreCase("kdl43")) {
@@ -75,16 +74,31 @@ public class ProductDB implements Productable {
             myTv.setPrice(819);
             myTv.setScreenSize("55");
             myTv.getManufacture("Sony");
-            p = myTv;
+            p = (Productable) myTv;
 
         }
+        if (productCode.equalsIgnoreCase("Dog")) {
+            Animal myAnimal = new Animal();
+            myAnimal.setType(productCode);
+            myAnimal.setPrice(819);
+            myAnimal.setAge(2);
+            myAnimal.setBreed("big dog");
+            p = myAnimal;
 
+        }
+        if (productCode.equalsIgnoreCase("ed")) {
+            Horse myHorse = new Horse();
+            myHorse.setDan(productCode);
+            myHorse.setSire("tt");
+            myHorse.setPrice(819);
+            myHorse.setAge(2);
+            myHorse.setHeight(100);
+            p =  myHorse;
+
+        }
         return p;
     }
 
-    @Override
-    public String getPriceFormatted() {
-        return null;
-    }
+
 }
 
