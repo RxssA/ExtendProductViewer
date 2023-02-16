@@ -1,5 +1,6 @@
 package ie.atu.product6;
 
+
 public class Animal implements Productable {
     private String type;
     private int age = 0;

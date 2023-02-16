@@ -1,7 +1,7 @@
 package ie.atu.product6;
 
 
-import ie.atu.productv5.Product;
+import ie.atu.product6.Product;
 
 public class Book extends Product {
 

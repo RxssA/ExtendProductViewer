@@ -1,5 +1,5 @@
 package ie.atu.product6;
-
+import ie.atu.product6.*;
 
 public class ProductDB{
 
@@ -17,21 +17,21 @@ public class ProductDB{
             myBook.setDescription("ATU Java Programming");
             myBook.setPrice(57.50);
             myBook.setAuthor("Joe Brown");
-            p = (Productable) myBook;
+            p = myBook;
         } else if (productCode.equalsIgnoreCase("jsp")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
             myBook.setDescription("Java Servlets and JSP");
             myBook.setPrice(57.50);
             myBook.setAuthor("Mike White");
-            p = (Productable) myBook;
+            p = myBook;
         } else if (productCode.equalsIgnoreCase("mysql")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
             myBook.setDescription("Lennon's MySQL");
             myBook.setPrice(54.50);
             myBook.setAuthor("Jim Lennon");
-            p = (Productable) myBook;
+            p = myBook;
         }
 
 
@@ -41,21 +41,21 @@ public class ProductDB{
             mySoftware.setDescription("Visual Studios");
             mySoftware.setPrice(57.50);
             mySoftware.setVersion("Microsoft 1.1");
-            p = (Productable) mySoftware;
+            p = mySoftware;
         } else if (productCode.equalsIgnoreCase("eclipse")) {
             Software mySoftware = new Software();
             mySoftware.setCode(productCode);
             mySoftware.setDescription("Build Java apps");
             mySoftware.setPrice(57.50);
             mySoftware.setVersion("Eclipse Neon");
-            p = (Productable) mySoftware;
+            p = mySoftware;
         } else if (productCode.equalsIgnoreCase("oracle")) {
             Software mySoftware = new Software();
             mySoftware.setCode(productCode);
             mySoftware.setDescription("Latest MySQL");
             mySoftware.setPrice(54.50);
             mySoftware.setVersion("Oracle 3.0");
-            p = (Productable) mySoftware;
+            p = mySoftware;
 
         } if (productCode.equalsIgnoreCase("pink")) {
             Music myMusic = new Music();
@@ -64,7 +64,7 @@ public class ProductDB{
             myMusic.setPrice(8);
             myMusic.setArtist("Pink Floyd");
             myMusic.setLabel("Columbia group");
-            p = (Productable) myMusic;
+            p = myMusic;
 
         }
          if (productCode.equalsIgnoreCase("kdl43")) {
@@ -74,7 +74,7 @@ public class ProductDB{
             myTv.setPrice(819);
             myTv.setScreenSize("55");
             myTv.getManufacture("Sony");
-            p = (Productable) myTv;
+            p = myTv;
 
         }
         if (productCode.equalsIgnoreCase("Dog")) {
